@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <script src="src/libs/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="src/libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="menu">
+        <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        <button data-target="home" class="button-menu"><i class="fa fa-home" aria-hidden="true"></i>Início</button>
+        <button data-target="about" class="button-menu"><i class="fa fa-id-card" aria-hidden="true"></i>Sobre</button>
+        <button data-target="projects" class="button-menu"><i class="fa fa-university" aria-hidden="true"></i>Projetos</button>
+      </div>
+
+      <div id="home" class="section active">
+        <h1>Bem-vindo ao meu portfólio</h1>
+        <p>Explore minhas habilidades e projetos.</p>
+      </div>
+
+      <div id="about" class="section">
+        <h1>Sobre Mim</h1>
+        <p>Desenvolvedor apaixonado por tecnologia e inovação.</p>
+      </div>
+
+      <div id="projects" class="section">
+        <h1>Projetos</h1>
+        <p>Projetos...</p>
+      </div>
+    </div>
+
+    <div class="sidebar hidden">
+        <div class="profile-pic">
+          <img src="src/assets/andreluke.jpg" alt="Foto de Perfil" />
+        </div>
+        <h2>André Lucas A. Sales</h2>
+        <p>Desenvolvedor fullstack</p>
+      
+        <!-- Nova seção de informações antes do contato -->
+        <button class="info-toggle">Mais informações <i class="fas fa-chevron-down"></i></button>
+        <div class="info">
+          <p><i class="fas fa-map-marker-alt"></i> Localização: Jacareí, São Paulo</p>
+          <p><i class="fas fa-birthday-cake"></i> Aniversário: 27 de Junho</p>
+          <p><i class="fa fa-calendar" aria-hidden="true"></i><span id="idade"></span></p>
+          <p><i class="fas fa-laptop-code"></i> Stack: JavaScript, TypeScript, React, Node.js</p>
+        </div>
+      
+        <!-- Contato agora vem depois da seção de informações -->
+        <div class="contact">
+          <a href="mailto:andre.l.sales2706@gmail.com" title="E-mail"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/andre-lucas-almeida-sales-156779251/"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/andreluke" target="_blank" title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+
+
+ 
+      <!-- Nova seção de informações -->
+  
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
