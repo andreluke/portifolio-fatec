@@ -14,6 +14,14 @@ body {
   overflow: hidden;
 }
 
+.section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
 /* Sidebar */
 .sidebar {
   width: 320px;
@@ -152,6 +160,7 @@ body {
 .content {
   flex: 1;
   padding: 60px;
+  padding-top: 40px;
   margin-right: 340px;
   overflow-y: auto; 
   -ms-overflow-style: none; 
@@ -168,11 +177,6 @@ body {
   display: flex;
   gap: 25px;
   margin-bottom: 35px;
-  position: sticky;
-  /* top: 0; 
-  background: linear-gradient(135deg, #000, #222); 
-  z-index: 1000; 
-  padding: 10px 20px; */
 }
 
 
@@ -210,6 +214,7 @@ body {
   display: block;
 }
 
+
 .button-menu {
   display: flex;
   justify-content: center;
@@ -218,18 +223,21 @@ body {
 }
 
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 40px;
+  justify-content: center; 
+  align-items: center; 
   padding: 20px;
+  max-width: 700px; 
+  margin: 0 auto; 
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  /* max-width: 350px; */
+  max-width: 350px;
   width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
@@ -276,29 +284,30 @@ body {
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
   .projects-container {
-    flex-direction: row;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
     justify-content: center;
+    max-width: 600px; 
   }
 
   .project-card {
-    max-width: 300px;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .projects-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    max-width: 90%;
   }
 
   .project-card {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .project-card {
-    max-width: 100%;
+  .projects-container {
+    padding: 10px;
   }
 
   .project-content h2 {
@@ -309,6 +318,7 @@ body {
     font-size: 13px;
   }
 }
+
 
 
 /* Animação */
@@ -323,10 +333,173 @@ body {
   }
 }
 
+/* Estilização da introdução */
+
+.tech-intro {
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+  max-width: 800px;
+  margin: 10px auto 30px;
+  padding: 0 20px;
+}
+
+/* Estilização dos cards */
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  gap: 6px;
+
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+.tech-card i {
+  font-size: 45px;
+  color: #1E90FF	;
+  transition: color 0.3s ease;
+}
+
+.tech-card:hover i {
+  color: #4682B4;
+}
+
+.tech-card span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .tech-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-card i {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-card i {
+    font-size: 30px;
+  }
+
+  .tech-card span {
+    font-size: 14px;
+  }
+
+  .tech-intro {
+    font-size: 16px;
+  }
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about-text {
+  flex: 2;
+  max-width: 1000px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #about p {
+    font-size: 16px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 90%;
+  }
+
+  .about-image {
+    max-width: 150px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+
+  .about-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .about-text {
+    padding: 0 15px;
+  }
+
+  .contact-btn {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+
+
 /* Responsividade */
 
 /* Celulares (até 768px) */
 @media (max-width: 830px) {
+
+  .section h1 {
+    font-size: 24px;
+  }
+
   .sidebar-toggle {
     display: block;
   }
@@ -335,10 +508,10 @@ body {
     left: 0;
     width: 260px;
     transform: translateX(0);
-    position: fixed; /* Corrigido para garantir que a sidebar fique no lugar certo */
-    top: 60px; /* Para fixar no topo da tela */
-    bottom: 0; /* Para que ocupe a altura inteira da tela */
-    transition: transform 0.3s ease-in-out; /* Garantir transição suave */
+    position: fixed; 
+    top: 60px; 
+    bottom: 0; 
+    transition: transform 0.3s ease-in-out; 
   }
 
   .sidebar.hidden {
@@ -380,14 +553,14 @@ body {
     background: linear-gradient(135deg, #111, #222);
     width: 100%;
     padding: 10px;
-    height: 60px; /* Define uma altura fixa para o menu */
-    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    height: 60px; 
+    z-index: 10; 
     display: flex;
     flex-wrap: wrap;
   }
 
   .content {
-    margin-top: 60px; /* Garante que o conteúdo fique abaixo do menu */
+    margin-top: 60px; 
     padding: 0px;
     margin-right: 0;
     padding-right: 20px;
@@ -404,10 +577,7 @@ body {
     padding-left: 20px;
     text-align: center;
   }
-  /* 
-  .section h1 {
-    margin-left: 20px;
-  } */
+
 
   .section.active {
     display: flex;
@@ -418,7 +588,7 @@ body {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 376px) {
   .sidebar {
     top: 50px; 
     width: 220px;
@@ -450,12 +620,12 @@ body {
 
   .menu {
     height: 50px;
-    padding: 8px;
+    padding: 5px;
   }
 
   .menu button {
     font-size: 12px;
-    padding: 5px;
+    padding: 4px;
   }
 
   .content {
