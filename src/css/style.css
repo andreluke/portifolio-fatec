@@ -569,18 +569,20 @@ body {
   }
 
   .menu {
-    justify-content: center;
-    gap: 15px;
+    display: flex;
+    justify-content: space-evenly; /* Distribui os itens igualmente pelo espaço disponível */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    gap: 30px; /* Espaçamento entre os itens */
     position: fixed;
     top: 0;
     background: linear-gradient(135deg, #111, #222);
     width: 100%;
     padding: 10px;
     height: 60px; 
-    z-index: 10; 
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 10;
   }
+  
+  
 
   .content {
     margin-top: 60px; 
