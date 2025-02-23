@@ -10,7 +10,7 @@ body {
   background: linear-gradient(135deg, #000, #222);
   color: #fff;
   display: flex;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
