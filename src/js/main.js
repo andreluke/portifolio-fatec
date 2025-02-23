@@ -16,6 +16,7 @@ $(document).ready(function () {
     var target = $(this).data("target");
     $(".section").removeClass("active");
     $("#" + target).addClass("active");
+    $(".sidebar").addClass("hidden");
   }); 
 
   $(".project-content").click(function () {
