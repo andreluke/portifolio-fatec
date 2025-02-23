@@ -12,6 +12,7 @@ body {
   display: flex;
   height: 100dvh;
   overflow: hidden;
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
 }
 
 .section h1 {
@@ -212,6 +213,7 @@ body {
 
 .section.active {
   display: block;
+  /* margin-bottom: 20px; */
 }
 
 
