@@ -16,6 +16,10 @@ $(document).ready(function () {
     var target = $(this).data("target");
     $(".section").removeClass("active");
     $("#" + target).addClass("active");
+  }); 
+
+  $(".project-content").click(function () {
+    $(this).find("p").toggleClass("expanded");
   });
 
   function calcularIdade(dataNascimento) {
