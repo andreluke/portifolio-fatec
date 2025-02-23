@@ -6,11 +6,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  background-color: transparent !important;
-}
-
-
 body {
   background: linear-gradient(135deg, #000, #222);
   color: #fff;
@@ -171,7 +166,6 @@ body {
   -ms-overflow-style: none; 
   scrollbar-width: none;
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
-
 }
 
 .content::-webkit-scrollbar {
